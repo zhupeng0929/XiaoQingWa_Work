@@ -95,3 +95,4 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.csproj.CoreCompileInputs.cache
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Newtonsoft.Json.pdb

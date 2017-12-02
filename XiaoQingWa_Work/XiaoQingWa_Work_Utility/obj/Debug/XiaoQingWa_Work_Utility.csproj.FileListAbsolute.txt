@@ -1,0 +1,6 @@
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Utility\bin\Debug\XiaoQingWa_Work_Utility.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Utility\bin\Debug\XiaoQingWa_Work_Utility.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Utility\obj\Debug\XiaoQingWa_Work_Utility.csprojResolveAssemblyReference.cache
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Utility\obj\Debug\XiaoQingWa_Work_Utility.csproj.CoreCompileInputs.cache
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Utility\obj\Debug\XiaoQingWa_Work_Utility.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Utility\obj\Debug\XiaoQingWa_Work_Utility.pdb

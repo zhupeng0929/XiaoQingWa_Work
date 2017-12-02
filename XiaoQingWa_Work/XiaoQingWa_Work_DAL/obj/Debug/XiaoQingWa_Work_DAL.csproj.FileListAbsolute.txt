@@ -1,0 +1,5 @@
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_DAL\bin\Debug\XiaoQingWa_Work_DAL.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_DAL\bin\Debug\XiaoQingWa_Work_DAL.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_DAL\obj\Debug\XiaoQingWa_Work_DAL.csproj.CoreCompileInputs.cache
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_DAL\obj\Debug\XiaoQingWa_Work_DAL.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_DAL\obj\Debug\XiaoQingWa_Work_DAL.pdb

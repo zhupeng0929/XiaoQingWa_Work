@@ -1,0 +1,99 @@
+﻿@model IEnumerable<XiaoQingWa_Work_Model.Entity.UserInfoEntity>
+
+@{
+    ViewBag.Title = "UserList";
+}
+
+<h2>UserList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateUser")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassWord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserSex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserMail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDelete)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PassWord)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserSex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserMail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserState)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDelete)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
+    }
+    else
+    {
+        <tr>
+            <td colspan='8'>
+                <span style='color: #FF8C40'>暂无数据显示</span>
+            </td>
+        </tr>
+    }
+
+</table>

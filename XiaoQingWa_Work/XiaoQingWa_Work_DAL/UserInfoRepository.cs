@@ -40,6 +40,29 @@ namespace XiaoQingWa_Work_DAL
             }
             return false;
         }
+
+        /// <summary>
+        /// 删除数据
+        /// </summary>
+        /// <param name="id">主键id</param>
+        /// <returns></returns>
+        public bool DelUserInfo(int id)
+        {
+            if (id > 0)
+            {
+                using (IDbConnection conn = new SqlConnection(GetConnstr))
+                {
+                    string strSql = "delete from UserInfo where UserId=@UserId";
+                    var param = new { UserId = id };
+                    var result = conn.Execute(strSql, param);
+                    if (result > 0)
+                        return true;
+                }
+            }
+            return false;
+        }
+
+
         /// <summary>
         /// 获取类别实体根据ID
         /// </summary>

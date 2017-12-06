@@ -22,16 +22,34 @@ namespace XiaoQingWa_Work.Controllers
         [HttpPost]
         public ActionResult CreateUser(UserInfoEntity userInfoEntity)
         {
+            var result = false;
             if (userInfoEntity != null)
             {
                 userInfoEntity.PassWord = CommonHelper.Md5(userInfoEntity.PassWord);
                 userInfoEntity.CreateDate = DateTime.Now;
                 userInfoEntity.UserState = 1;
-                var result = userInfoRepository.AddUserInfo(userInfoEntity);
+                result = userInfoRepository.AddUserInfo(userInfoEntity);
             }
+            ReturnJsonMessage msg = new ReturnJsonMessage();
 
+            msg.Text = result ? "保存成功" : "保存失败";
+            msg.Value = result ? "success" : "error";
 
-            return View();
+            return Json(msg);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteUser(int id)
+        {
+            var result = false;
+            result = userInfoRepository.DelUserInfo(id);
+
+            ReturnJsonMessage msg = new ReturnJsonMessage();
+
+            msg.Text = result ? "删除成功" : "删除失败";
+            msg.Value = result ? "success" : "error";
+
+            return Json(msg);
         }
     }
 }

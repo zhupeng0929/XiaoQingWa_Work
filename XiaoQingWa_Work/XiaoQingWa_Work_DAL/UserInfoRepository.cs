@@ -100,25 +100,31 @@ namespace XiaoQingWa_Work_DAL
         /// 更新实体列表
         /// </summary>
         /// <returns></returns>
-        public int UpdateUserInfo(UserInfoEntity entity)
+        public bool UpdateUserInfo(UserInfoEntity entity)
         {
             int row;
             using (IDbConnection conn = new SqlConnection(GetConnstr))
             {
                 row = conn.Update(entity);
             }
-            return row;
+            return row > 0;
         }
         /// <summary>
         /// 更新实体列表--事物
         /// </summary>
         /// <returns></returns>
-        public int UpdateUserInfo(UserInfoEntity entity, IDbConnection conn, IDbTransaction trans)
+        public bool UpdateUserInfo(UserInfoEntity entity, IDbConnection conn, IDbTransaction trans)
         {
             int row;
             row = conn.Update(entity, trans);
-            return row;
+            return row > 0;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
         public bool UpdateUserStatu(int id, int state)
         {
             if (id > 0)

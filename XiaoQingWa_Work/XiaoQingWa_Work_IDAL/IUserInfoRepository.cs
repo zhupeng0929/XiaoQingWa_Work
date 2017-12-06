@@ -10,10 +10,11 @@ namespace XiaoQingWa_Work_IDAL
     public interface IUserInfoRepository : IDependency
     {
         UserInfoEntity GetUserInfo(string userName);
+        UserInfoEntity GetUserInfo(int userid);
         bool AddUserInfo(UserInfoEntity model);
         bool DelUserInfo(int id);
         bool UpdateUserStatu(int id, int statu);
         List<UserInfoEntity> GetUserInfoList();
-
+        bool UpdateUserInfo(UserInfoEntity model);
     }
 }

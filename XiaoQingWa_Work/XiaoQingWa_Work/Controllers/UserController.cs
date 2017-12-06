@@ -15,9 +15,14 @@ namespace XiaoQingWa_Work.Controllers
             var userList = userInfoRepository.GetUserInfoList();
             return View(userList);
         }
-        public ActionResult CreateUser()
+        public ActionResult CreateUser(int? userid)
         {
-            return View();
+            var model = new UserInfoEntity();
+            if (userid.HasValue)
+            {
+                model= userInfoRepository.GetUserInfo(userid.Value);
+            }
+            return View(model);
         }
         [HttpPost]
         public ActionResult CreateUser(UserInfoEntity userInfoEntity)
@@ -25,10 +30,24 @@ namespace XiaoQingWa_Work.Controllers
             var result = false;
             if (userInfoEntity != null)
             {
-                userInfoEntity.PassWord = CommonHelper.Md5(userInfoEntity.PassWord);
-                userInfoEntity.CreateDate = DateTime.Now;
-                userInfoEntity.UserState = 1;
-                result = userInfoRepository.AddUserInfo(userInfoEntity);
+                if (userInfoEntity.UserId == 0)
+                {
+                    userInfoEntity.PassWord = CommonHelper.Md5(userInfoEntity.PassWord);
+                    userInfoEntity.CreateDate = DateTime.Now;
+                    userInfoEntity.UserState = 1;
+                    result = userInfoRepository.AddUserInfo(userInfoEntity);
+                }
+                else
+                {
+                    var uerModel = userInfoRepository.GetUserInfo(userInfoEntity.UserId);
+                    uerModel.UserName = userInfoEntity.UserName;
+                    uerModel.UserSex = userInfoEntity.UserSex;
+                    uerModel.UserPhone = userInfoEntity.UserPhone;
+                    uerModel.UserMail = userInfoEntity.UserMail;
+                    uerModel.UserAddress = userInfoEntity.UserAddress;
+                    //uerModel.PassWord = CommonHelper.Md5(userInfoEntity.PassWord);
+                    result = userInfoRepository.UpdateUserInfo(uerModel);
+                }
             }
             ReturnJsonMessage msg = new ReturnJsonMessage();
 
@@ -51,7 +70,8 @@ namespace XiaoQingWa_Work.Controllers
 
             return Json(msg);
         }
-        public ActionResult UpdateUserStatu(int id,int statu)
+        [HttpPost]
+        public ActionResult UpdateUserStatu(int id, int statu)
         {
             var result = false;
             result = userInfoRepository.UpdateUserStatu(id, statu);
@@ -63,6 +83,6 @@ namespace XiaoQingWa_Work.Controllers
 
             return Json(msg);
         }
-        
+
     }
 }

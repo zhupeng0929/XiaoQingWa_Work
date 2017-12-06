@@ -51,5 +51,18 @@ namespace XiaoQingWa_Work.Controllers
 
             return Json(msg);
         }
+        public ActionResult UpdateUserStatu(int id,int statu)
+        {
+            var result = false;
+            result = userInfoRepository.UpdateUserStatu(id, statu);
+
+            ReturnJsonMessage msg = new ReturnJsonMessage();
+
+            msg.Text = result ? "操作成功" : "操作失败";
+            msg.Value = result ? "success" : "error";
+
+            return Json(msg);
+        }
+        
     }
 }

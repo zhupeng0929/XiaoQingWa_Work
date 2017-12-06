@@ -119,5 +119,20 @@ namespace XiaoQingWa_Work_DAL
             row = conn.Update(entity, trans);
             return row;
         }
+        public bool UpdateUserStatu(int id, int state)
+        {
+            if (id > 0)
+            {
+                using (IDbConnection conn = new SqlConnection(GetConnstr))
+                {
+                    string strSql = "update  UserInfo set UserState=@UserState where UserId=@UserId";
+                    var param = new { UserId = id, UserState = state };
+                    var result = conn.Execute(strSql, param);
+                    if (result > 0)
+                        return true;
+                }
+            }
+            return false;
+        }
     }
 }

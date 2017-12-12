@@ -87,7 +87,7 @@ namespace XiaoQingWa_Work_DAL
             }
             return mResult;
         }
-        public List<UserInfoEntity> GetUserInfoList()
+        public List<UserInfoEntity> GetUserInfoList(UserQuery userQuery)
         {
             var mResult = new List<UserInfoEntity>();
             using (IDbConnection conn = new SqlConnection(GetConnstr))
@@ -96,6 +96,37 @@ namespace XiaoQingWa_Work_DAL
             }
             return mResult;
         }
+        public List<UserInfoEntity> GetUserInfoListByQueryModel(UserQuery userQuery)
+        {
+            var mResult = new List<UserInfoEntity>();
+            using (IDbConnection conn = new SqlConnection(GetConnstr))
+            {
+                StringBuilder strSql = new StringBuilder("Select * from UserInfo where 1=1 ");
+
+                if (userQuery.datemin != null && userQuery.datemin != new DateTime(1900, 1, 1))
+                {
+                    strSql.Append(" and  CreateDate>=@datemin ");
+                }
+                if (userQuery.datemax != null && userQuery.datemax != new DateTime(1900, 1, 1))
+                {
+                    strSql.Append(" and  CreateDate<@datemax ");
+                }
+                if (!string.IsNullOrWhiteSpace(userQuery.keyWords))
+                {
+                    strSql.Append(" and  (UserName=@keyWords or UserPhone=@keyWords or UserMail=@keyWords ) ");
+                }
+                var param = new
+                {
+                    datemin = userQuery.datemin,
+                    datemax = userQuery.datemax,
+                    keyWords = userQuery.keyWords
+                };
+
+                mResult = conn.Query<UserInfoEntity>(strSql.ToString(), param).ToList();
+            }
+            return mResult;
+        }
+
         /// <summary>
         /// 更新实体列表
         /// </summary>

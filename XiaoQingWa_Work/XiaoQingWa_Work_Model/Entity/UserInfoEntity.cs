@@ -129,4 +129,12 @@ namespace XiaoQingWa_Work_Model.Entity
 
 
     }
+
+
+    public class UserQuery
+    {
+        public DateTime? datemin { get; set; }
+        public DateTime? datemax { get; set; }
+        public string keyWords { get; set; }
+    }
 }

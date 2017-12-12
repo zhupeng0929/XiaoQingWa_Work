@@ -12,9 +12,14 @@ namespace XiaoQingWa_Work.Controllers
         // GET: User
         public ActionResult UserList()
         {
-            var userList = userInfoRepository.GetUserInfoList();
+            return View();
+        }
+        public ActionResult UserListResult(UserQuery userQuery)
+        {
+            var userList = userInfoRepository.GetUserInfoListByQueryModel(userQuery);
             return View(userList);
         }
+
         public ActionResult CreateUser(int? userid)
         {
             var model = new UserInfoEntity();
@@ -83,6 +88,7 @@ namespace XiaoQingWa_Work.Controllers
 
             return Json(msg);
         }
+
 
     }
 }

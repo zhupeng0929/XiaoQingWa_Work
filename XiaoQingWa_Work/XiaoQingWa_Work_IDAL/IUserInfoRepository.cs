@@ -14,7 +14,7 @@ namespace XiaoQingWa_Work_IDAL
         bool AddUserInfo(UserInfoEntity model);
         bool DelUserInfo(int id);
         bool UpdateUserStatu(int id, int statu);
-        List<UserInfoEntity> GetUserInfoList();
+        List<UserInfoEntity> GetUserInfoListByQueryModel(UserQuery userQuery);
         bool UpdateUserInfo(UserInfoEntity model);
     }
 }

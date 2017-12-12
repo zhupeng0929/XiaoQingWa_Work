@@ -1,5 +1,3 @@
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.csprojResolveAssemblyReference.cache
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.csproj.CoreCompileInputs.cache
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\ApplicationInsights.config
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\XiaoQingWa_Work.dll.config
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\XiaoQingWa_Work.dll
@@ -42,7 +40,6 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Dapper.SimpleCRUD.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Microsoft.Extensions.Configuration.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Microsoft.Extensions.Configuration.Abstractions.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Microsoft.Extensions.Primitives.xml
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Newtonsoft.Json.pdb
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Newtonsoft.Json.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\System.Web.Helpers.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\System.Web.Mvc.xml
@@ -66,5 +63,8 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\zh-Hans\System.Web.Ra
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.csprojResolveAssemblyReference.cache
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.csproj.CoreCompileInputs.cache
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Newtonsoft.Json.pdb

@@ -12617,14 +12617,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_Model\\XiaoQingWa_Work_Model.csproj": {
-              "projectPath": "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_Model\\XiaoQingWa_Work_Model.csproj"
+            "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_DAL\\XiaoQingWa_Work_DAL.csproj": {
+              "projectPath": "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_DAL\\XiaoQingWa_Work_DAL.csproj"
             },
             "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_Utility\\XiaoQingWa_Work_Utility.csproj": {
               "projectPath": "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_Utility\\XiaoQingWa_Work_Utility.csproj"
             },
-            "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_DAL\\XiaoQingWa_Work_DAL.csproj": {
-              "projectPath": "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_DAL\\XiaoQingWa_Work_DAL.csproj"
+            "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_Model\\XiaoQingWa_Work_Model.csproj": {
+              "projectPath": "E:\\Git\\XiaoQingWa_Work\\XiaoQingWa_Work\\XiaoQingWa_Work_Model\\XiaoQingWa_Work_Model.csproj"
             }
           }
         }
@@ -12638,18 +12638,18 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "10.0.3"
+            "version": "[10.0.3, )"
           }
         },
         "imports": [

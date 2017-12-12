@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace XiaoQingWa_Work.Controllers
 {
+    [Auth]
     public class HomeController : Controller
     {
         public ActionResult Index()

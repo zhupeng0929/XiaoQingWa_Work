@@ -13,7 +13,7 @@ namespace XiaoQingWa_Work.Controllers
 {
     public class AccountController : BaseController
     {
-        
+
         // GET: Account
         public ActionResult Login()
         {
@@ -56,6 +56,17 @@ namespace XiaoQingWa_Work.Controllers
             {
                 return null;
             }
+        }
+
+        /// <summary>
+        /// 退出
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Logout()
+        {
+            Session[CommonHelper.SessionUserKey] = null;
+            CookieHelper.ClearCookie(CommonHelper.Md5(CommonHelper.COOKIE_KEY_USERINFO));
+            return RedirectToAction("Login");
         }
     }
 }

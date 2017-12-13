@@ -25,7 +25,7 @@ namespace XiaoQingWa_Work.Controllers
             var model = new UserInfoEntity();
             if (userid.HasValue)
             {
-                model= userInfoRepository.GetUserInfo(userid.Value);
+                model = userInfoRepository.GetUserInfo(userid.Value);
             }
             return View(model);
         }
@@ -75,6 +75,23 @@ namespace XiaoQingWa_Work.Controllers
 
             return Json(msg);
         }
+
+        [HttpPost]
+        public ActionResult DeleteUserBatch(int[] ids)
+        {
+            var result = false;
+            ReturnJsonMessage msg = new ReturnJsonMessage();
+            if (ids.Length > 0)
+            {
+                result = userInfoRepository.DelUserInfoBatch(ids);
+            }
+
+            msg.Text = result ? "删除成功" : "删除失败";
+            msg.Value = result ? "success" : "error";
+
+            return Json(msg);
+        }
+
         [HttpPost]
         public ActionResult UpdateUserStatu(int id, int statu)
         {
@@ -89,6 +106,26 @@ namespace XiaoQingWa_Work.Controllers
             return Json(msg);
         }
 
+        public ActionResult ChangePassWord(int id)
+        {
+            var model = userInfoRepository.GetUserInfo(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult ChangePassWord(int UserId, string newpassword)
+        {
+
+            var model = userInfoRepository.GetUserInfo(UserId);
+
+            newpassword = CommonHelper.Md5(newpassword);
+            var result = userInfoRepository.UpdateUserPassWord(UserId, newpassword);
+            ReturnJsonMessage msg = new ReturnJsonMessage();
+
+            msg.Text = result ? "修改成功" : "修改失败";
+            msg.Value = result ? "success" : "error";
+
+            return Json(msg);
+        }
 
     }
 }

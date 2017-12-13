@@ -29,14 +29,14 @@
                 <i class="Hui-iconfont">&#xe600;</i> 添加用户
             </a>
         </span>
-        
+
     </div>
     <div class="mt-20" id="resultList">
 
     </div>
 </div>
 @section pagescripts{
-<script type="text/javascript">
+    <script type="text/javascript">
         $(function () {
             $('.table-sort').dataTable({
                 "aaSorting": [[1, "desc"]],//默认第几个排序
@@ -94,7 +94,7 @@
         }
         /*密码-修改*/
         function change_password(title, url, id, w, h) {
-            layer_show(title, url, w, h);
+            layer_show(title, url+"?id="+id, w, h);
         }
         /*用户-删除*/
         function member_del(id) {
@@ -114,7 +114,36 @@
                 });
             });
         }
+        function datadel() {
 
+            var idList = [];
+            var rows = $("input[name='UserIds']:checked");
+            if (rows) {
+                $.each(rows, function (index, item) {
+                    var vl = $(item).val();
+                    idList.push(vl);
+                });
+            }
+            if (rows.length == 0) {
+                $.alert({ content: "请至少选择一行" });
+                return false;
+            }
+            layer.confirm('确认要删除吗？', function (index) {
+                var params = {
+                    ids: idList
+                };
+                var url = '@Url.Action("DeleteUserBatch")';
+                $.post(url, params, function (data) {
+                    if (data.Value == "success") {
+                        layer.msg(data.Text, { icon: 1, time: 1000 }, function () {
+                            location.replace(location.href);
+                        });
+                    } else {
+                        layer.msg(data.Text, { icon: 2, time: 1000 });
+                    }
+                });
+            });
+        }
 
         function Search() {
             var params = $("form").serialize();
@@ -127,7 +156,7 @@
                 $("#searchBtn").removeAttr("disabled");
             });
         }
-</script>
+    </script>
 
 }
 

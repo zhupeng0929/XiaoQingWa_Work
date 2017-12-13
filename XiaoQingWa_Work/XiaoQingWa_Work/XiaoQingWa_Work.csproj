@@ -1283,6 +1283,7 @@
     <Content Include="Views\User\CreateUser.cshtml" />
     <Content Include="Views\User\View.cshtml" />
     <Content Include="Views\User\UserListResult.cshtml" />
+    <Content Include="Views\User\ChangePassWord.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

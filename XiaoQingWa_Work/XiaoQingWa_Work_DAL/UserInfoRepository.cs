@@ -61,8 +61,28 @@ namespace XiaoQingWa_Work_DAL
             }
             return false;
         }
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool DelUserInfoBatch(int[] ids)
+        {
+            if (ids.Length > 0)
+            {
+                using (IDbConnection conn = new SqlConnection(GetConnstr))
+                {
+                    string strSql = "update UserInfo set isdelete=1 where UserId in @UserId ";
 
-
+                    DynamicParameters param = new DynamicParameters();
+                    param.Add("UserId", ids);
+                    var result = conn.Execute(strSql, param);
+                    if (result > 0)
+                        return true;
+                }
+            }
+            return false;
+        }
         /// <summary>
         /// 获取类别实体根据ID
         /// </summary>
@@ -164,6 +184,27 @@ namespace XiaoQingWa_Work_DAL
                 {
                     string strSql = "update  UserInfo set UserState=@UserState where UserId=@UserId";
                     var param = new { UserId = id, UserState = state };
+                    var result = conn.Execute(strSql, param);
+                    if (result > 0)
+                        return true;
+                }
+            }
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public bool UpdateUserPassWord(int id, string password)
+        {
+            if (id > 0)
+            {
+                using (IDbConnection conn = new SqlConnection(GetConnstr))
+                {
+                    string strSql = "update  UserInfo set PassWord=@PassWord where UserId=@UserId";
+                    var param = new { UserId = id, PassWord = password };
                     var result = conn.Execute(strSql, param);
                     if (result > 0)
                         return true;

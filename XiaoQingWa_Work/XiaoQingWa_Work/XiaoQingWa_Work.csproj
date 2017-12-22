@@ -162,6 +162,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -236,6 +237,21 @@
     <Content Include="plugins\lib\hcharts\Highcharts\5.0.6\js\themes\skies.js" />
     <Content Include="plugins\lib\hcharts\Highcharts\5.0.6\readme.txt" />
     <Content Include="plugins\lib\html5shiv.js" />
+    <Content Include="plugins\lib\html5up\control\css\zyUpload.css" />
+    <Content Include="plugins\lib\html5up\control\images\add_img.png" />
+    <Content Include="plugins\lib\html5up\control\images\bg.png" />
+    <Content Include="plugins\lib\html5up\control\images\delete_blue.png" />
+    <Content Include="plugins\lib\html5up\control\images\delete_white.png" />
+    <Content Include="plugins\lib\html5up\control\images\fileType\file.png" />
+    <Content Include="plugins\lib\html5up\control\images\fileType\rar.png" />
+    <Content Include="plugins\lib\html5up\control\images\fileType\txt.png" />
+    <Content Include="plugins\lib\html5up\control\images\fileType\zip.png" />
+    <Content Include="plugins\lib\html5up\control\images\success.png" />
+    <Content Include="plugins\lib\html5up\control\js\jquery-1.7.2.js" />
+    <Content Include="plugins\lib\html5up\control\js\zyUpload.js" />
+    <Content Include="plugins\lib\html5up\core\jq22.js" />
+    <Content Include="plugins\lib\html5up\core\zyFile.js" />
+    <Content Include="plugins\lib\html5up\index.html" />
     <Content Include="plugins\lib\Hui-iconfont\1.0.8\demo.html" />
     <Content Include="plugins\lib\Hui-iconfont\1.0.8\iconfont.css" />
     <Content Include="plugins\lib\Hui-iconfont\1.0.8\iconfont.min.css" />
@@ -1251,6 +1267,7 @@
     <Content Include="plugins\static\h-ui\images\face\Thumbs.db" />
     <Content Include="plugins\static\h-ui\images\iCheck\Thumbs.db" />
     <Content Include="plugins\static\h-ui\images\ucnter\Thumbs.db" />
+    <Content Include="plugins\lib\html5up\control\images\fileType\Thumbs.db" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1284,6 +1301,8 @@
     <Content Include="Views\User\View.cshtml" />
     <Content Include="Views\User\UserListResult.cshtml" />
     <Content Include="Views\User\ChangePassWord.cshtml" />
+    <Content Include="Views\Picture\PictureList.cshtml" />
+    <Content Include="Views\Picture\AddPicture.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPictureInfoRepository.cs" />
     <Compile Include="IUserInfoRepository.cs" />
     <Compile Include="IDependency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

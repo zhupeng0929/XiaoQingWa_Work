@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\PictureInfoEntity.cs" />
     <Compile Include="Entity\UserInfoEntity.cs" />
     <Compile Include="Enum\Enum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

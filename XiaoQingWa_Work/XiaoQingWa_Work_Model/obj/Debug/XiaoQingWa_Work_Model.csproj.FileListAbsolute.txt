@@ -8,3 +8,4 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Model\bin\Debug\Newtonsof
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Model\obj\Debug\XiaoQingWa_Work_Model.csproj.CoreCompileInputs.cache
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Model\obj\Debug\XiaoQingWa_Work_Model.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Model\obj\Debug\XiaoQingWa_Work_Model.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Model\obj\Debug\XiaoQingWa_Work_Model.csprojResolveAssemblyReference.cache

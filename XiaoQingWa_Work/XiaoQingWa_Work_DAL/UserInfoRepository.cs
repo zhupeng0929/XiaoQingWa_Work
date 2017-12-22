@@ -107,6 +107,11 @@ namespace XiaoQingWa_Work_DAL
             }
             return mResult;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userQuery"></param>
+        /// <returns></returns>
         public List<UserInfoEntity> GetUserInfoList(UserQuery userQuery)
         {
             var mResult = new List<UserInfoEntity>();
@@ -116,6 +121,7 @@ namespace XiaoQingWa_Work_DAL
             }
             return mResult;
         }
+
         public List<UserInfoEntity> GetUserInfoListByQueryModel(UserQuery userQuery)
         {
             var mResult = new List<UserInfoEntity>();

@@ -8,6 +8,7 @@ using XiaoQingWa_Work_IDAL;
 
 namespace XiaoQingWa_Work.Controllers
 {
+    [Auth]
     public class BaseController : Controller
     {
         protected readonly IUserInfoRepository userInfoRepository = new UserInfoRepository();

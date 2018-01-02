@@ -11,9 +11,9 @@ using System.Configuration;
 
 namespace XiaoQingWa_Work.Controllers
 {
-    public class AccountController : BaseController
+    public class AccountController : Controller
     {
-
+        protected readonly IUserInfoRepository userInfoRepository = new UserInfoRepository();
         // GET: Account
         public ActionResult Login()
         {

@@ -7,7 +7,7 @@ using XiaoQingWa_Work_Model.Entity;
 using XiaoQingWa_Work_Utility;
 namespace XiaoQingWa_Work.Controllers
 {
-    [Auth]
+    
     public class HomeController : BaseController
     {
         public ActionResult Index()

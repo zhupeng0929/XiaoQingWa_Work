@@ -315,9 +315,12 @@
 						
 						funDealtPreviewHtml();		
 					},
-					onDelete: function(file, files) {
+                    onDelete: function (file, files) {
+                        var id = $("#uploadList_" + file.index).attr("name")
+                        $('#himgPath').val($('#himgPath').val().replace(id, ""));
 						// 移除效果
-						$("#uploadList_" + file.index).fadeOut();
+                        $("#uploadList_" + file.index).remove();
+                        
 						// 重新设置统计栏信息
 						self.funSetStatusInfo(files);
 						console.info("剩下的文件");
@@ -336,6 +339,7 @@
                         serverData = eval('(' + response + ')');
                         if (serverData.Text == "true") {
                             $('#himgPath').val($('#himgPath').val() + serverData.Value + ",");
+                            $("#uploadList_" + file.index).attr("name", serverData.Value + ",")
                         }
                         else {
                             console.info(serverData.Value);
@@ -355,8 +359,10 @@
 						$("#uploadInf").append("<p>文件" + file.name + "上传失败！</p>");	
 						//$("#uploadImage_" + file.index).css("opacity", 0.2);
 					},
-					onComplete: function(response){
-						console.info(response);
+                    onComplete: function (file,response) {
+                        serverData = eval('(' + response + ')');
+                        $("#uploadList_" + file.index).attr("name", serverData.Value + ",")
+                        console.info(serverData.Value);
 					},
 					onDragOver: function() {
 						$(this).addClass("upload_drag_hover");

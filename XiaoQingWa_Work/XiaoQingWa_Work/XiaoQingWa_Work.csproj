@@ -1303,6 +1303,8 @@
     <Content Include="Views\User\ChangePassWord.cshtml" />
     <Content Include="Views\Picture\PictureList.cshtml" />
     <Content Include="Views\Picture\AddPicture.cshtml" />
+    <Content Include="Views\Picture\PictureList_R.cshtml" />
+    <Content Include="Views\Picture\PictureShow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

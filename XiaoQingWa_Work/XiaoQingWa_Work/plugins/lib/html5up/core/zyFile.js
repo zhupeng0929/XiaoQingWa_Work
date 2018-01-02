@@ -30,7 +30,7 @@ var ZYFILE = {
 		onFailure : function(file, responseInfo){    // 提供给外部获取单个文件上传失败，供外部实现失败效果
 		
 		},
-		onComplete : function(responseInfo){         // 提供给外部获取全部文件上传完成，供外部实现完成效果
+        onComplete: function (file,responseInfo){         // 提供给外部获取全部文件上传完成，供外部实现完成效果
 			
 		},
 		
@@ -161,7 +161,7 @@ var ZYFILE = {
 		    	self.onSuccess(file, xhr.responseText);
 		    	if(self.uploadFile.length==0){
 		    		// 回调全部完成方法
-		    		self.onComplete("全部完成");
+                    self.onComplete(file, xhr.responseText);
 		    	}
 		    }, false);  
 		    // 错误

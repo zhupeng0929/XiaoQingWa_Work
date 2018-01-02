@@ -6,16 +6,27 @@ using System.Web.Mvc;
 
 namespace XiaoQingWa_Work.Controllers
 {
-    public class PictureController : Controller
+    public class PictureController : BaseController
     {
         // GET: Picture
         public ActionResult PictureList()
         {
             return View();
         }
+        public ActionResult PictureList_R()
+        {
+            var pictureList = pictureInfoRepository.GetPictureInfoList();
+            return View(pictureList);
+        }
+
         public ActionResult AddPicture()
         {
             return View();
+        }
+        public ActionResult PictureShow()
+        {
+            var pictureList = pictureInfoRepository.GetPictureInfoList();
+            return View(pictureList);
         }
     }
 }

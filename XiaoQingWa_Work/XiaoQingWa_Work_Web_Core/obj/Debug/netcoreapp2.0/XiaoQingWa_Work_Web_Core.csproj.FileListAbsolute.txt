@@ -11,8 +11,6 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcor
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_IDAL.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_Model.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_Utility.dll
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\Dapper.SimpleCRUD.dll
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\Dapper.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\System.Web.Mvc.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_DAL.pdb
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_DAL.dll.config
@@ -20,10 +18,6 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcor
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_Utility.pdb
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_IDAL.pdb
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\XiaoQingWa_Work_IDAL.dll.config
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\Dapper.SimpleCRUD.pdb
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\Dapper.SimpleCRUD.xml
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\Dapper.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\System.Web.Mvc.xml
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\obj\Debug\netcoreapp2.0\XiaoQingWa_Work_Web_Core.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\obj\Debug\netcoreapp2.0\XiaoQingWa_Work_Web_Core.pdb
-E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_Web_Core\bin\Debug\netcoreapp2.0\Dapper.pdb

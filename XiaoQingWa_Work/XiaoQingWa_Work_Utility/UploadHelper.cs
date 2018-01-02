@@ -158,6 +158,7 @@ namespace XiaoQingWa_Work_Utility
         /// <returns></returns>
         public static string SaveFileMethod(HttpPostedFileBase file)
         {
+           
             string newFileName = Guid.NewGuid().ToString().Replace("-", "") + System.IO.Path.GetExtension(file.FileName);
             string returnPath = System.Web.HttpContext.Current.Server.MapPath("~/uploadfile");
             string relativePath = "/doc/" + DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Day.ToString() + "/";
@@ -171,9 +172,9 @@ namespace XiaoQingWa_Work_Utility
             }
             try
             {
-                string fileServiceAddress = ConfigurationManager.AppSettings["fileServiceAddress"];
+                //string fileServiceAddress = ConfigurationManager.AppSettings["fileServiceAddress"];
                 file.SaveAs((returnPath + relativePath + newFileName));
-                return fileServiceAddress + "/uploadfile" + relativePath + newFileName;
+                return "/uploadfile" + relativePath + newFileName;
             }
             catch (Exception ex)
             {

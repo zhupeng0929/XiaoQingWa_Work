@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using XiaoQingWa_Work_Model.Entity;
 using XiaoQingWa_Work_Utility;
 namespace XiaoQingWa_Work.Controllers
 {
     [Auth]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -30,6 +31,7 @@ namespace XiaoQingWa_Work.Controllers
 
         public ActionResult SaveUploadFile()
         {
+            ReturnJsonMessage returnJsonMessage = new ReturnJsonMessage();
             HttpFileCollectionBase imgUpFile = Request.Files;
             if (imgUpFile == null || imgUpFile.Count == 0)
             {
@@ -37,13 +39,34 @@ namespace XiaoQingWa_Work.Controllers
             }
             try
             {
-                string filePath = UploadHelper.SaveFileMethod(imgUpFile[0]);
-                return Content("success|" + filePath, "text/html;charset=UTF-8");
+
+                var pictureMD5 = CommonHelper.GetMD5HashFromFile(imgUpFile[0].InputStream);
+                var pictureInfo = pictureInfoRepository.GetPictureInfoByFileMD5(pictureMD5);
+                if (pictureInfo != null && pictureInfo.Id > 0)//存在
+                {
+
+                    returnJsonMessage.Text = "true";
+                    returnJsonMessage.Value = pictureInfo.Id.ToString();
+                }
+                else//不存在
+                {
+                    string filePath = UploadHelper.SaveFileMethod(imgUpFile[0]);
+                    var newPictureInfo = new PictureInfoEntity();
+                    newPictureInfo.CreateTime = DateTime.Now;
+                    newPictureInfo.FileMD5 = pictureMD5;
+                    newPictureInfo.FilePath = filePath;
+                    newPictureInfo.OldName = imgUpFile[0].FileName;
+                    var id = pictureInfoRepository.AddPictureInfo(newPictureInfo);//新增图片
+                    returnJsonMessage.Text = "true";
+                    returnJsonMessage.Value = id.ToString();
+                }
             }
             catch (Exception ex)
             {
-                return Content(ex.Message, "text/html;charset=UTF-8");
+                returnJsonMessage.Text = "false";
+                returnJsonMessage.Value = ex.Message;
             }
+            return Content(JsonHelper.Serializer(returnJsonMessage));//返回图片id
         }
     }
 }

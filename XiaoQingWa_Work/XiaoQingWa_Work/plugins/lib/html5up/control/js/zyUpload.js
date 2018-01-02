@@ -333,8 +333,13 @@
 					onSuccess: function(file, response) {
 						$("#uploadProgress_" + file.index).hide();
 						$("#uploadSuccess_" + file.index).show();
-						//serverData = eval('(' + response + ')');
-                        $('#himgPath').val($('#himgPath').val() + response+",");
+                        serverData = eval('(' + response + ')');
+                        if (serverData.Text == "true") {
+                            $('#himgPath').val($('#himgPath').val() + serverData.Value + ",");
+                        }
+                        else {
+                            console.info(serverData.Value);
+                        }
 						//$("#uploadInf").append("<p>上传成功，文件地址是：" + serverData.Data.FileID + "</p>");
 						// 根据配置参数确定隐不隐藏上传成功的文件
 						if(para.finishDel){

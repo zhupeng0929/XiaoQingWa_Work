@@ -25,28 +25,39 @@ namespace XiaoQingWa_Work_DAL
     public partial class PictureInfoRepository : BaseEntity, IPictureInfoRepository
     {
         /// <summary>
-        /// 新增实体
+        /// 图片是否存在
         /// </summary>
-        public bool AddPictureInfo(PictureInfoEntity model)
+        /// <returns></returns>
+        public bool ExistPincture(string pictureMD5)
         {
             using (IDbConnection conn = new SqlConnection(GetConnstr))
             {
-                var result = conn.Insert<int>(model);
+                string strSql = "select * from PictureInfo where FileMD5=@FileMD5";
+                var param = new { FileMD5 = pictureMD5 };
+                var result = conn.Execute(strSql, param);
                 if (result > 0)
                     return true;
             }
             return false;
         }
         /// <summary>
+        /// 新增实体
+        /// </summary>
+        public int AddPictureInfo(PictureInfoEntity model)
+        {
+            using (IDbConnection conn = new SqlConnection(GetConnstr))
+            {
+                var result = conn.Insert<int>(model);
+                return result;
+            }
+        }
+        /// <summary>
         /// 新增实体--事物
         /// </summary>
-        public bool AddPictureInfo(PictureInfoEntity model, IDbConnection conn, IDbTransaction trans)
+        public int AddPictureInfo(PictureInfoEntity model, IDbConnection conn, IDbTransaction trans)
         {
             var result = conn.Insert<int>(model, trans);
-            if (result > 0)
-                return true;
-            else
-                return false;
+            return result;
         }
         /// <summary>
         /// 删除数据
@@ -100,6 +111,18 @@ namespace XiaoQingWa_Work_DAL
             using (IDbConnection conn = new SqlConnection(GetConnstr))
             {
                 mResult = conn.Get<PictureInfoEntity>(id);
+            }
+            return mResult;
+        }
+
+        public PictureInfoEntity GetPictureInfoByFileMD5(string fileMD5)
+        {
+            var mResult = new PictureInfoEntity();
+            using (IDbConnection conn = new SqlConnection(GetConnstr))
+            {
+                string strSql = "select * from PictureInfo where FileMD5=@FileMD5";
+                var param = new { FileMD5 = fileMD5 };
+                mResult = conn.Query<PictureInfoEntity>(strSql, param).FirstOrDefault();
             }
             return mResult;
         }

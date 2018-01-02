@@ -11,5 +11,6 @@ namespace XiaoQingWa_Work.Controllers
     public class BaseController : Controller
     {
         protected readonly IUserInfoRepository userInfoRepository = new UserInfoRepository();
+        protected readonly IPictureInfoRepository pictureInfoRepository = new PictureInfoRepository();
     }
 }

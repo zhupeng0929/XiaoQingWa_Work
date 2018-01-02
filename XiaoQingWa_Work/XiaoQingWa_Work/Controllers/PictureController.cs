@@ -15,7 +15,7 @@ namespace XiaoQingWa_Work.Controllers
         }
         public ActionResult PictureList_R()
         {
-            var pictureList = pictureInfoRepository.GetPictureInfoList();
+            var pictureList = pictureInfoRepository.GetList();
             return View(pictureList);
         }
 
@@ -25,7 +25,7 @@ namespace XiaoQingWa_Work.Controllers
         }
         public ActionResult PictureShow()
         {
-            var pictureList = pictureInfoRepository.GetPictureInfoList();
+            var pictureList = pictureInfoRepository.GetList();
             return View(pictureList);
         }
     }

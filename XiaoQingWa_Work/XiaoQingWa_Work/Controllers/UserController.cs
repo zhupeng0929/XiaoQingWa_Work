@@ -25,7 +25,7 @@ namespace XiaoQingWa_Work.Controllers
             var model = new UserInfoEntity();
             if (userid.HasValue)
             {
-                model = userInfoRepository.GetUserInfo(userid.Value);
+                model = userInfoRepository.GetSingle(userid.Value);
             }
             return View(model);
         }
@@ -40,18 +40,18 @@ namespace XiaoQingWa_Work.Controllers
                     userInfoEntity.PassWord = CommonHelper.Md5(userInfoEntity.PassWord);
                     userInfoEntity.CreateDate = DateTime.Now;
                     userInfoEntity.UserState = 1;
-                    result = userInfoRepository.AddUserInfo(userInfoEntity);
+                    result = userInfoRepository.Add(userInfoEntity)>0;
                 }
                 else
                 {
-                    var uerModel = userInfoRepository.GetUserInfo(userInfoEntity.UserId);
+                    var uerModel = userInfoRepository.GetSingle(userInfoEntity.UserId);
                     uerModel.UserName = userInfoEntity.UserName;
                     uerModel.UserSex = userInfoEntity.UserSex;
                     uerModel.UserPhone = userInfoEntity.UserPhone;
                     uerModel.UserMail = userInfoEntity.UserMail;
                     uerModel.UserAddress = userInfoEntity.UserAddress;
                     //uerModel.PassWord = CommonHelper.Md5(userInfoEntity.PassWord);
-                    result = userInfoRepository.UpdateUserInfo(uerModel);
+                    result = userInfoRepository.Update(uerModel);
                 }
             }
             ReturnJsonMessage msg = new ReturnJsonMessage();
@@ -108,14 +108,14 @@ namespace XiaoQingWa_Work.Controllers
 
         public ActionResult ChangePassWord(int id)
         {
-            var model = userInfoRepository.GetUserInfo(id);
+            var model = userInfoRepository.GetSingle(id);
             return View(model);
         }
         [HttpPost]
         public ActionResult ChangePassWord(int UserId, string newpassword)
         {
 
-            var model = userInfoRepository.GetUserInfo(UserId);
+            var model = userInfoRepository.GetSingle(UserId);
 
             newpassword = CommonHelper.Md5(newpassword);
             var result = userInfoRepository.UpdateUserPassWord(UserId, newpassword);

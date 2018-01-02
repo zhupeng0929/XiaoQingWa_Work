@@ -22,7 +22,7 @@ namespace XiaoQingWa_Work_DAL
     /// <summary>
     /// PictureInfoDAL数据访问类
     /// </summary>
-    public partial class PictureInfoRepository : BaseEntity, IPictureInfoRepository
+    public partial class PictureInfoRepository : BaseRepository<PictureInfoEntity>, IPictureInfoRepository
     {
         /// <summary>
         /// 图片是否存在
@@ -40,25 +40,7 @@ namespace XiaoQingWa_Work_DAL
             }
             return false;
         }
-        /// <summary>
-        /// 新增实体
-        /// </summary>
-        public int AddPictureInfo(PictureInfoEntity model)
-        {
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                var result = conn.Insert<int>(model);
-                return result;
-            }
-        }
-        /// <summary>
-        /// 新增实体--事物
-        /// </summary>
-        public int AddPictureInfo(PictureInfoEntity model, IDbConnection conn, IDbTransaction trans)
-        {
-            var result = conn.Insert<int>(model, trans);
-            return result;
-        }
+       
         /// <summary>
         /// 删除数据
         /// </summary>
@@ -101,19 +83,7 @@ namespace XiaoQingWa_Work_DAL
             }
             return false;
         }
-        /// <summary>
-        /// 获取类别实体根据ID
-        /// </summary>
-        /// <returns></returns>
-        public PictureInfoEntity GetPictureInfo(int id)
-        {
-            var mResult = new PictureInfoEntity();
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                mResult = conn.Get<PictureInfoEntity>(id);
-            }
-            return mResult;
-        }
+        
 
         public PictureInfoEntity GetPictureInfoByFileMD5(string fileMD5)
         {
@@ -126,41 +96,6 @@ namespace XiaoQingWa_Work_DAL
             }
             return mResult;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public List<PictureInfoEntity> GetPictureInfoList()
-        {
-            var mResult = new List<PictureInfoEntity>();
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                mResult = conn.GetList<PictureInfoEntity>().ToList();
-            }
-            return mResult;
-        }
-        /// <summary>
-        /// 更新实体列表
-        /// </summary>
-        /// <returns></returns>
-        public bool UpdatePictureInfo(PictureInfoEntity entity)
-        {
-            int row;
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                row = conn.Update(entity);
-            }
-            return row > 0;
-        }
-        /// <summary>
-        /// 更新实体列表--事物
-        /// </summary>
-        /// <returns></returns>
-        public bool UpdatePictureInfo(PictureInfoEntity entity, IDbConnection conn, IDbTransaction trans)
-        {
-            int row;
-            row = conn.Update(entity, trans);
-            return row > 0;
-        }
+       
     }
 }

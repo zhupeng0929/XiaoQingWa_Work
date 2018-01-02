@@ -14,32 +14,8 @@ namespace XiaoQingWa_Work_DAL
     /// <summary>
     /// UserInfoDAL数据访问类
     /// </summary>
-    public class UserInfoRepository : BaseEntity, IUserInfoRepository
+    public class UserInfoRepository : BaseRepository<UserInfoEntity>, IUserInfoRepository
     {
-        /// <summary>
-        /// 新增实体--事物
-        /// </summary>
-        public bool AddUserInfo(UserInfoEntity model, IDbConnection conn, IDbTransaction trans)
-        {
-            var result = conn.Insert<int>(model, trans);
-            if (result > 0)
-                return true;
-            else
-                return false;
-        }
-        /// <summary>
-        /// 新增实体
-        /// </summary>
-        public bool AddUserInfo(UserInfoEntity model)
-        {
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                var result = conn.Insert<int>(model);
-                if (result > 0)
-                    return true;
-            }
-            return false;
-        }
 
         /// <summary>
         /// 删除数据
@@ -83,19 +59,7 @@ namespace XiaoQingWa_Work_DAL
             }
             return false;
         }
-        /// <summary>
-        /// 获取类别实体根据ID
-        /// </summary>
-        /// <returns></returns>
-        public UserInfoEntity GetUserInfo(int id)
-        {
-            var mResult = new UserInfoEntity();
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                mResult = conn.Get<UserInfoEntity>(id);
-            }
-            return mResult;
-        }
+        
         public UserInfoEntity GetUserInfo(string userName)
         {
             var mResult = new UserInfoEntity();
@@ -153,29 +117,7 @@ namespace XiaoQingWa_Work_DAL
             return mResult;
         }
 
-        /// <summary>
-        /// 更新实体列表
-        /// </summary>
-        /// <returns></returns>
-        public bool UpdateUserInfo(UserInfoEntity entity)
-        {
-            int row;
-            using (IDbConnection conn = new SqlConnection(GetConnstr))
-            {
-                row = conn.Update(entity);
-            }
-            return row > 0;
-        }
-        /// <summary>
-        /// 更新实体列表--事物
-        /// </summary>
-        /// <returns></returns>
-        public bool UpdateUserInfo(UserInfoEntity entity, IDbConnection conn, IDbTransaction trans)
-        {
-            int row;
-            row = conn.Update(entity, trans);
-            return row > 0;
-        }
+       
         /// <summary>
         /// 
         /// </summary>
@@ -218,5 +160,7 @@ namespace XiaoQingWa_Work_DAL
             }
             return false;
         }
+
+        
     }
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -30,10 +32,10 @@ namespace XiaoQingWa_Work_Web_Core
 
             ////注入
             //services.AddSingleton<XiaoQingWa_Work_DAL.PictureInfoRepository>(new XiaoQingWa_Work_DAL.PictureInfoRepository() { GetConnstr = connStr });
-          
+
             //services.AddSingleton<DAL.CategoryDAL>(new DAL.CategoryDAL() { ConnStr = connStr });
             //services.AddSingleton<DAL.IncomeDAL>(new DAL.IncomeDAL() { ConnStr = connStr });
-
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             services.AddMvc();
         }
 
@@ -51,7 +53,7 @@ namespace XiaoQingWa_Work_Web_Core
             }
 
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

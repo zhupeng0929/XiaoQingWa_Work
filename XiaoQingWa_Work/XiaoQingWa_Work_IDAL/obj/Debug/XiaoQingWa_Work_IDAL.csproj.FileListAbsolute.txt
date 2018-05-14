@@ -10,3 +10,4 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_IDAL\obj\Debug\XiaoQingWa
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_IDAL\obj\Debug\XiaoQingWa_Work_IDAL.csproj.CoreCompileInputs.cache
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_IDAL\obj\Debug\XiaoQingWa_Work_IDAL.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_IDAL\obj\Debug\XiaoQingWa_Work_IDAL.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work_IDAL\obj\Debug\XiaoQingWa_Work_IDAL.csproj.CopyComplete

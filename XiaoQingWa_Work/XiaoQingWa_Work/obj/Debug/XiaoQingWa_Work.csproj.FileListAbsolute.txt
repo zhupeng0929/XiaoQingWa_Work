@@ -68,3 +68,12 @@ E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.dll
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.pdb
 E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Newtonsoft.Json.pdb
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\libeay32.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\libgcc_s_dw2-1.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\mingwm10.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\ssleay32.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\wkhtmltox0.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Common.Logging.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Pechkin.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\bin\Pechkin.Synchronized.dll
+E:\Git\XiaoQingWa_Work\XiaoQingWa_Work\XiaoQingWa_Work\obj\Debug\XiaoQingWa_Work.csproj.CopyComplete

@@ -10,14 +10,14 @@ namespace XiaoQingWa_Work_Web_Core.Controllers
 {
     public class PictureController : Controller
     {
-        PictureInfoRepository cadal;
-        public PictureController(PictureInfoRepository cadal) { this.cadal = cadal; }
+        //PictureInfoRepository cadal;
+        //public PictureController(PictureInfoRepository cadal) { this.cadal = cadal; }
 
        
         public async Task<IActionResult> Index()
         {
-            var pictureList =await cadal.GetListAsync();
-            return View(pictureList);
+            //var pictureList =await cadal.GetListAsync();
+            return View();
         }
     }
 }
